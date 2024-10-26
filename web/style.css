@@ -1,0 +1,146 @@
+
+            /* General header styling */
+            body {
+                margin: 0;
+                padding: 0;
+                background-image: url("https://i.postimg.cc/h49bT99B/pexels-photo-175711.jpg");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 100vh; /* Make sure the background covers the full viewport height */
+                font-family: Arial, sans-serif;
+                color: white; /* Ensure text remains readable */
+            }
+
+            /* Header styling */
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px;
+                background-size: cover; /* Scale the image to cover the entire header */
+                background-position: center;
+                background-repeat: no-repeat;
+                color: white;
+            }
+
+            /* Left side navigation styling */
+            .left {
+                flex: 1;
+                text-align: left;
+            }
+
+            .left a {
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 30px;
+                transition: color 0.3s;
+            }
+
+            .left a:hover {
+                color: #ffcc00;
+                transform: scale(1.2); /* Smooth hover effect */
+            }
+
+            /* Search box styling */
+            .search-box {
+                flex: 2;
+                display: flex;
+                justify-content: center;
+            }
+
+            .search-box input[type="text"] {
+                padding: 8px;
+                width: 60%;
+                max-width: 300px;
+                border: none;
+                border-radius: 20px;
+                outline: none;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            }
+
+            .search-box input[type="submit"] {
+                padding: 8px 15px;
+                background-color: #ffcc00;
+                border: none;
+                border-radius: 20px;
+                color: #333;
+                font-weight: bold;
+                cursor: pointer;
+                margin-left: 10px;
+            }
+
+            .search-box input[type="submit"]:hover {
+                background-color: #ff9900;
+            }
+
+            /* Right side user links styling */
+            .right {
+                flex: 1;
+                display: flex;
+                justify-content: flex-end;
+                gap: 15px;
+            }
+
+            .right a {
+                color: white;
+                font-size: 20px;
+                text-decoration: none;
+                font-weight: bold;
+                transition: color 0.3s;
+                position: relative;
+            }
+
+            .right a:hover {
+                color: #ffcc00;
+            }
+
+            .right a:not(:last-child)::after {
+                content: "|";
+                color: white;
+                margin-left: 10px;
+            }
+
+            /* Item container styling */
+            .item-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Tạo lưới responsive */
+                gap: 20px; /* Thêm khoảng cách giữa các item */
+                padding: 20px;
+            }
+
+            .item-container div {
+                background-color: rgba(255, 255, 255, 0.3); /* Nền trắng với độ trong suốt nhẹ */
+                padding: 20px; /* Tăng padding để khung lớn hơn */
+                text-align: center;
+                border-radius: 10px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            }
+
+            .item-container img {
+                max-width: 100px; /* Kích thước hình ảnh */
+                height: auto;
+                margin-bottom: 10px;
+            }
+
+            .price {
+                color: #ff6600; /* Màu sắc cho giá */
+                font-weight: bold; /* Đậm */
+                font-size: 24px; /* Kích thước font lớn hơn */
+            }
+
+            a.buy,
+            a.wishlist {
+                color: #007bff; /* Màu sắc cho chữ Đặt mua và Tim */
+                text-decoration: none; /* Bỏ gạch chân */
+                font-weight: bold; /* Đậm */
+                font-size: 20px; /* Kích thước font */
+                margin-top: 5px; /* Khoảng cách giữa các liên kết */
+            }
+
+            a.buy:hover,
+            a.wishlist:hover {
+                color: #ffcc00; /* Màu sắc khi hover */
+                text-decoration: underline; /* Gạch chân khi hover */
+            }
